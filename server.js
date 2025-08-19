@@ -28,6 +28,11 @@ app.use("/api/cv", require("./routes/cv"));
 app.use("/api/comments", require("./routes/comments"));
 app.use("/api/skills", require("./routes/skills"));
 
+// Health check endpoint
+app.get("/healthz", (req, res) => {
+  res.status(200).send("OK");
+});
+
 // Test koneksi database
 const pool = require("./db");
 app.get("/api/test-db", async (req, res) => {
