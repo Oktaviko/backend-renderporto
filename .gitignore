@@ -1,0 +1,4 @@
+# Jangan upload environment & dependencies
+.env
+node_modules/
+uploads
